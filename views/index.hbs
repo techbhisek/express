@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highcharts Bar Graph</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+    <p id="p">{{chartData}}</p>
+    <div id="container" style="width:100%; height:400px;"></div>
+    <script>
+     
+     document.addEventListener('DOMContentLoaded', function() {
+       let chartData = JSON.parse(document.getElementById('p').innerHTML);
+       document.getElementById('p').innerHTML = '';
+        Highcharts.chart('container',
+          chartData
+        );
+      }); 
+    </script>
+  </body>
+</html>

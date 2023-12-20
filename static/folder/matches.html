@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player of the Match Chart</title>
+  <!-- Include Highcharts library -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+
+<div id="playerChart" style="height: 400px;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Your data
+      fetch('http://localhost:3000/ipl//Matchesplayed').then((data)=>data.json())
+      .then((data)=>{
+  // Extract unique players and seasons
+  var teams = [...new Set(data.map(item => item.winner))];
+  var seasons = [...new Set(data.map(item => item.season))];
+
+  // Prepare series data
+  var seriesData = teams.map(team=> ({
+    name: team,
+    data: seasons.map(season => {
+      var match = data.find(item => item.season === season && item.winner === team);
+      return match ? match.count: 0;
+    })
+  }));
+
+  console.log(seriesData)
+
+  // Create Highcharts chart
+  Highcharts.chart('playerChart', {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'MATCHES PLAYED IN EACH SEASON'
+    },
+    xAxis: {
+      categories: seasons,
+      title: {
+        text: 'Season'
+      },
+     
+    },
+    yAxis: {
+      title: {
+        text: 'Number of Times Player of the Match'
+      },
+      min: 0, // Minimum value on the Y-axis
+      tickInterval:5
+    },
+    plotOptions: {
+      series: {
+        stacking: 'normal',
+        pointWidth: 40,
+     // Adjust the width of the bars as needed
+      }
+    },
+    
+    series: seriesData
+  });
+});});
+</script>
+
+</body>
+</html>

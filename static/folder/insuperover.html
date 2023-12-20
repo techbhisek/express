@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    
+        fetch('http://localhost:3000/ipl/insuperover')
+        .then((data)=>data.json())
+        .then((data)=>{
+           
+           document.getElementById('name').innerHTML  = "NAME : " + data[0].bowler
+           document.getElementById('Economy').innerHTML = "ECONOMY :" + data[0].economy
+           document.getElementById('bowler').src = data[0].url
+        })
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div  style="text-align : center">
+        <img id="bowler" src=""><br/>
+    <h3 id="name"></h3>
+    <h3 id="Economy"></h4>
+    </div>
+    <title>Document</title>
+</head>
+<body>
+   
+    
+</body>
+</html>

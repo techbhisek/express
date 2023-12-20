@@ -1,0 +1,9 @@
+[
+  {
+    "bowler": "Z Khan",
+    "bowlerurl" :"http://localhost:3000/images/zaheer-khan.webp",
+    "batsman": "MS Dhoni",
+    "batsmanurl" :"http://localhost:3000/images/ms-dhoni.webp" ,
+    "times": 7
+  }
+]

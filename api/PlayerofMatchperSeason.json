@@ -1,0 +1,57 @@
+[
+  {
+    "season": 2008,
+    "player_of_match": "SE Marsh",
+    "times": 5
+  },
+  {
+    "season": 2009,
+    "player_of_match": "YK Pathan",
+    "times": 3
+  },
+  {
+    "season": 2010,
+    "player_of_match": "SR Tendulkar",
+    "times": 4
+  },
+  {
+    "season": 2011,
+    "player_of_match": "CH Gayle",
+    "times": 6
+  },
+  {
+    "season": 2012,
+    "player_of_match": "CH Gayle",
+    "times": 5
+  },
+  {
+    "season": 2013,
+    "player_of_match": "MEK Hussey",
+    "times": 5
+  },
+  {
+    "season": 2014,
+    "player_of_match": "GJ Maxwell",
+    "times": 4
+  },
+  {
+    "season": 2015,
+    "player_of_match": "DA Warner",
+    "times": 4
+  },
+  {
+    "season": 2016,
+    "player_of_match": "V Kohli",
+    "times": 5
+  },
+  {
+    "season": 2017,
+    "player_of_match": "BA Stokes",
+    "times": 3
+  },
+  {
+    "season": 2017,
+    "player_of_match": "NM Coulter-Nile",
+    "times": 3
+  }
+]

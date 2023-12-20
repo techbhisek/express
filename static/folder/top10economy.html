@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         fetch('http://localhost:3000/ipl/Dismissal')
+    .then((data)=>data.json())
+    .then((data)=>{
+       
+       document.getElementById('bowler').innerHTML  = "BOWLER NAME : " + data[0].bowler
+       document.getElementById('batsman').innerHTML = "BATSMAN NAME:" + data[0].batsman
+       document.getElementById('bowlerimg').src = data[0].bowlerurl
+       document.getElementById('batsmanimg').src = data[0].batsmanurl
+       document.getElementById('times').innerHTML ='Times :' + data[0].times
+    })
+    </script>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div  style="text-align: center;">
+     <img id="bowlerimg" src = "">
+     <h2 id="bowler"></h2>
+     <h1 id="times"></h1>
+     <img id="batsmanimg" src="">
+     <h2 id = "batsman"></h2>
+      </div>
+    
+</body>
+</html>
